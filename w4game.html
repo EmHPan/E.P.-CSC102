@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+
+    <!--this line imports enternal JavaScript file-->
+    <!--<script scr="code.js"></script> -->
+
+    <!--TODO: move JAvaScript to external file-->
+    <!-- () hold values-->
+    <script>
+        function playCraps(){
+console.log("playCraps() function was called");
+
+//roll die 1
+let roll1 = rollDice();
+
+//roll die 2
+let roll2 = rollDice();
+
+console.log( "roll1=" + roll1);
+console.log("roll2=" + roll2);
+
+let sum = roll1+roll2;
+
+if(sum == 7 || sum ==11){
+    console.log("you lost")
+}
+
+//modulus - %- do division problem and get remainder as result
+//roll1 % 2 == 0 -this will be true if number is even
+else if (roll1 % 2 == 0){
+    
+}
+        }
+
+        function rollDice(){
+            //Math.random() is built in JS function which generates random number
+            let die = Math.random() *6;
+
+            return Math.ceil(die);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Dice Game</h1>
+    </header>
+
+<main>
+    <button onclick="playCraps()">Play Craps</button>
+
+</main>
+
+</body>
+</html>
