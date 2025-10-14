@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Example</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Input Example</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <br>
+            <a href="boards.html">Boards</a>
+            <br>
+            <a href="w4game.html">Dice Game</a>
+            <br>
+            <a href="inputExample.html">Input Example</a>
+        </nav>
+    </header>
+
+<main>
+
+    <form method="post" action="#" name="frmInput" id="frmInput">
+
+        <label for="txtFullName"> Full Name:</label>
+        <input type="text" name="txtFullName" id="txtFullName" placeholder="ex: Jane Doe">
+<br>
+        <label for="txtFavColor"> Favorite Color: </label>
+        <input type="text" name="txtFavColor" id="txtFavColor" placeholder="ex: Purple">
+<br>
+        <label for="txtBirthDate"> Birth Date: </label>
+        <input type="text" name="txtBirthDate" id="txtBirthDate" placeholder="mm/dd/yyyy">
+<br>
+        <button onclick="validateForm();">Save Input</button>
+    </form>
+
+
+    <script>
+        function validateForm(){
+            let fullName = "";
+
+            let favColor = "";
+
+            let birthDate = "";
+        }
+    </script>
+</main>
+    
+</body>
+</html>
