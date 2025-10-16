@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Example</title>
     <link rel="stylesheet" href="main.css">
+    <script src="form.js"></script>
 </head>
 <body>
     <header>
@@ -21,31 +22,24 @@
     </header>
 
 <main>
+<div id="divMessage"></div>
 
-    <form method="post" action="#" name="frmInput" id="frmInput">
+    <form method="post" action="#" name="frmInput" id="frmInput" onsubmit="return false;">
 
-        <label for="txtFullName"> Full Name:</label>
-        <input type="text" name="txtFullName" id="txtFullName" placeholder="ex: Jane Doe">
+        <label for="txtFirstName"> First Name:</label>
+        <input type="text" name="txtFirstName" id="txtFirstName" placeholder="ex: Jane">
 <br>
-        <label for="txtFavColor"> Favorite Color: </label>
-        <input type="text" name="txtFavColor" id="txtFavColor" placeholder="ex: Purple">
+        <label for="txtLastName"> Last Name: </label>
+        <input type="text" name="txtLastName" id="txtLastName" placeholder="ex: Doe">
 <br>
-        <label for="txtBirthDate"> Birth Date: </label>
-        <input type="text" name="txtBirthDate" id="txtBirthDate" placeholder="mm/dd/yyyy">
+        <label for="txtZipCode"> ZIP Code: </label>
+        <input type="text" name="txtZipCode" id="txtZipCode" placeholder="ex: 12345">
 <br>
         <button onclick="validateForm();">Save Input</button>
     </form>
 
 
-    <script>
-        function validateForm(){
-            let fullName = "";
-
-            let favColor = "";
-
-            let birthDate = "";
-        }
-    </script>
+    
 </main>
     
 </body>
