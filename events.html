@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Basics</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <main>
+       <header>
+        <h1 id="heading">Event Handling Basics</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <br>
+            <a href="boards.html">Boards</a>
+            <br>
+            <a href="w4game.html">Dice Game</a>
+            <br>
+            <a href="inputExample.html">Input Example</a>
+            <br>
+            <a href="events.html">Events Handling Basics</a>
+            <br>
+        <a href="basics.html">JavaScript Basics</a>
+        </nav>
+       </header> 
+
+        <button id="btnClickMe" onclick="changeText();">Click Me!</button>
+    </main>
+
+    <!--ToDo: Move JS to external file-->
+    <script>
+
+/*
+*Fancy Comment
+*Can look like this
+*
+*Explain things
+*Looks nicer than other comment
+*
+*Comments mostly for remembering and sharing what is happening
+*/
+
+//Text will change when button clicked
+function changeText(){
+//h1 text changed
+    document.getElementById("heading").textContent = "Event Handled";
+}
+
+//when want code to run repeatedly at set period of time, can use setInterval;
+// 2 arguments: first s code to run; second is how often code to run in miliseconds
+//1000 ms = 1 second
+//use function(){} to set up anonymous function- only used in that place, aka inline function
+setInterval(function(){
+    console.log("Test");
+}, 5000);
+    </script>
+   
+   <footer>
+        Emmalin Pantermuehl
+        <br>
+        emmalinpantermeuhl@gmail.com
+        <br>
+        University of Advancing Technology
+        <br>
+        2625 West Baseline Road
+        <br>
+        Tempe, AZ 85283
+      </footer>
+</body>
+</html>
