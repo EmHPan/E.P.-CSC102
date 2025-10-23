@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSC102 Index</title>
     <link rel="stylesheet" href="main.css">
+    <script src="code.js"></script>
+
 </head>
 <body>
     <header>
@@ -23,14 +25,20 @@
             <br>
             <a href="events.html">Events Handling Basics</a>
             <br>
-        <a href="basics.html">JavaScript Basics</a>
+            <a href="basics.html">JavaScript Basics</a>
         </nav>
     </header>
 
     <p>
-        <img src="dungeonrumba.png" width="400" id="memeImage">
+        <button id="btnStart" onclick="startMove();">Start Roomba!</button>
+        <br>
+        <!--stop button not clickable when page load b/c disabled=true-->
+        <button id="btnStop" onclick="stopMove();" disabled="true">Stop Roomba!</button>
+        
+        <img src="dungeonrumba.png" width="400" id="memeImage" class="myImgClass">
         
     </p>
+    <!--Moved to code.js-->
 
     <footer>
       Emmalin Pantermuehl

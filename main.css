@@ -6,6 +6,17 @@ color: #8EE3F5
 nav{
 padding: 5px;
 line-height: 30px;
+color: #8EE3F5;
+}
+
+a:link{
+    color:#8EE3F5;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #A799B7;
+    text-decoration: none;
 }
 
 footer{
