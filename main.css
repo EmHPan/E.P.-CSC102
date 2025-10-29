@@ -1,6 +1,7 @@
 body{
 background-color: #3E517A ;
-color: #8EE3F5
+color: #8EE3F5;
+font-family: "Story Script", sans-serif;
 }
 
 nav{
@@ -34,3 +35,10 @@ img{
     left: 25%;
     top: 25%;
 }
+
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
