@@ -143,3 +143,92 @@ do{
     // do something here
     console.log("Do While Loop");
 }while(exit != "yes"); //ALWAYS place ; here, JS needs it
+
+//Palindrome
+
+   //function to test for Palindrome
+   function testPalin(){
+    //get input value
+    //remove spaces at beginning and end of string
+    let userInput = document.getElementById("txtInput").value.trim();
+
+    //works
+   // console.log("userInput = " + userInput);
+
+    //move into if/else
+    isPalindrome(userInput);
+
+    //statement implies == true, could write out if want to
+    //isPalindrome(userInput) == true
+    if(isPalindrome(userInput)){
+        document.getElementById("divResult").textContent = "Yes, " + userInput + " is a palindrome!"
+    }
+
+    else{
+        document.getElementById("divResult").textContent = "No, " + userInput + " is not a palindrome."
+    }
+}
+
+
+//function to test if word is palindrome
+function isPalindrome(stringToTest){
+// remove spaces inside submitted word(s)
+//   /\s means space
+//   /g means global
+let cleanWord = stringToTest.replace(/\s/g, "");
+
+cleanWord = cleanWord.toLowerCase();
+
+//works
+//console.log("cleanWord = " + cleanWord);
+
+//convert cleaned to array
+let arrClean = cleanWord.split("");
+
+
+//reverse array contents
+arrClean = arrClean.reverse();
+
+//turn array back to string
+let reverseWord = arrClean.join("");
+
+//works
+//console.log("reverseWord = " + reverseWord);
+
+
+//compare to see if Palindrome
+return cleanWord == reverseWord;
+}
+
+
+//Class notes
+
+//not OOP, 
+// Java, C#, C++ are OOP
+//JS now kind of supports classes
+//capitalize 1st letter of class name
+//PascalCase -- each 1st letter is capitalized
+
+class Student{
+    //constructor is like function that is called when obj created - quickly create obj
+    constructor(name, major, gpa, startYear, gradYear, email, birthDate){
+        //this.name is class field
+        // name is value passed in when constructor is clased to create obj
+        this.name = name;
+        this.major = major;
+        this.gpa = gpa;
+        this.startYear = startYear;
+        this.gradYear = gradYear;
+        this.email = email;
+        this.birthDate = birthDate;   
+    }
+//Methods
+    AttendClass(){
+        return "Class attended";
+    }
+
+    //other methods are going to have similar design
+}
+
+//student1 is object
+let student1 = new Student("Bob Smith", "ACS", 4.0, 2025, 2028, "bob@bob.com", "12/12/12");
