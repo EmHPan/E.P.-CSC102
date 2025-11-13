@@ -1,6 +1,6 @@
   //Test Early, Test Often!!
   
-  //Image moving Code
+  //Image moving Code ///
   
   //Keep track of current interval so we can stop it
 
@@ -47,7 +47,7 @@ document.getElementById("btnStop").disabled=true;
         return Math.floor(Math.random() * 800);
    }
 
-   //Basics Page Code
+   //Basics Page Code /////
  
    //simgle line comment ctrl ?
 /* Multi-line Comment*/
@@ -96,7 +96,7 @@ function addNumbers(num1, num2){
 }
 
 
-/* ****** Loops ***** 
+/* ****** Loops ***** /
 Let us run chunks of code over again
 good for data and displaying info
 
@@ -144,7 +144,7 @@ do{
     console.log("Do While Loop");
 }while(exit != "yes"); //ALWAYS place ; here, JS needs it
 
-//Palindrome
+//Palindrome ////////
 
    //function to test for Palindrome
    function testPalin(){
@@ -201,7 +201,7 @@ return cleanWord == reverseWord;
 }
 
 
-//Class notes
+//Class notes //////
 
 //not OOP, 
 // Java, C#, C++ are OOP
@@ -232,3 +232,4 @@ class Student{
 
 //student1 is object
 let student1 = new Student("Bob Smith", "ACS", 4.0, 2025, 2028, "bob@bob.com", "12/12/12");
+
