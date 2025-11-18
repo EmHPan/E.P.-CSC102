@@ -77,7 +77,8 @@ middleName = "Hope";
 // == is equality/ are values on both sides same
 // = is assignment - value on left side of = will become value on right
 // === is value and data type the same?, not very good in JavaScript
-if (age == 5){
+    //this works
+/*if (age == 5){
     console.log("age is 25")
 }
 else if(age == 18){
@@ -89,7 +90,7 @@ else if(age == 25){
 //catch-all
 else{
 console.log("age is not 5")
-}
+}*/
  //Functions//
 function addNumbers(num1, num2){
     return num1 + num2;
@@ -109,10 +110,12 @@ while loop - runs undetermined # of times - variable # of times
 //section 2: condition needed for loop to keep running
 //section 3: what changes each time (counter variable value change)
 // ++ adds 1 each time
-for(let i = 0; i < 5; i++){
+
+//works
+/*for(let i = 0; i < 5; i++){
     //code to run each time
     console.log("i = " + i);
-}
+}*/
 
 /* while loop
 unclear how many time loop will run
@@ -128,6 +131,7 @@ think about exit plan FIRST!!
 // set varible that we want while loop to test
 let exit = "no";
 //test for condition, once no longer true, stop running loop
+    //this works
 while(exit != "yes"){
 console.log("Test my loop");
 
@@ -233,3 +237,47 @@ class Student{
 //student1 is object
 let student1 = new Student("Bob Smith", "ACS", 4.0, 2025, 2028, "bob@bob.com", "12/12/12");
 
+//Notes 11/18
+//Array Practice
+
+//this is too much work to make each plant its own variable
+let plant1 = "Rose";
+let plant2 = "Nightshade";
+let plant3 = "Hydrangea";
+let plant4 = "Tree";
+let plant5 = "Flower";
+let plant6 = "Cactus";
+
+//better way to store plant list = data structure
+// array = simplest data structure in JS
+let arrPlants = ["Rose", "Nightshade", "Hydrangea", "Tree", "Flower", "Cactus"];
+
+//function to add plant to array
+function addPlant(){
+    //get new plant name
+    let newPlant = document.getElementById("txtNewPlant").value;
+
+    //add new plant to array
+    arrPlants.push(newPlant);
+}
+
+//loop through array of plants
+function showPlants(){
+    //build li for each plant
+
+    //shortcut to ul in HTML
+    let ulPlants = document.getElementById("ulPlants");
+
+    // for each loop to run through list
+    arrPlants.forEach(function(plant, index){
+        //create li using JS
+        let li = document.createElement("li");
+        //will cause plant name to show on screen
+        li.textContent = plant;
+
+        //will add new list item to existing ul
+        ulPlants.appendChild(li);
+    });
+}
+
+console.log(arrPlants)
