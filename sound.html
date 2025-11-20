@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Sound</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="code.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Play Sound</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <br>
+            <a href="boards.html">Boards</a>
+            <br>
+            <a href="w4game.html">Dice Game</a>
+            <br>
+            <a href="inputExample.html">Input Example</a>
+            <br>
+            <a href="events.html">Events Handling Basics</a>
+            <br>
+            <a href="basics.html">JavaScript Basics</a>
+            <br>
+            <a href="palindrome.html">Palindrome Tester</a>
+            <br>
+            <a href="class.html">Class Notes</a>
+            <br>
+            <a href="sound.html">Play Sound</a>
+        </nav>
+    </header>
+
+    <main>
+        <!--div holds dynamically created audio element
+        1 button to add audio to page
+        button to start and butotn to stop audio
+        start and stop hidden at first-->
+        <div id="divAudio">
+<p>The audio is 1 minute and 16 seconds long. ;)</p>
+        </div>
+            <!--can write function and then add to onclick or the other way around-->
+            <button id="btnAddAudio" onclick="addAudio();">Add Audio</button>
+<br>
+            <button id="btnPlayAudio" hidden="true" onclick="playAudio();">Play Audio</button>
+<br>
+            <button id="btnPauseAudio" hidden="true" onclick="pauseAudio();">Pause Audio</button>
+        
+    </main>
+    <!--Moved JS to code.js-->
+    
+</body>
+</html>

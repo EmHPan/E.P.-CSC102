@@ -281,3 +281,43 @@ function showPlants(){
 }
 
 console.log(arrPlants)
+
+
+//Sound
+//create function to add audio element in HTML div
+function addAudio(){
+    //need audio html element
+    let audioElem = document.createElement("audio");
+    //set id so can work with in other functions and HTML
+    audioElem.setAttribute("id", "audioElem");
+    //use sound file in folder
+    audioElem.setAttribute("src", "waterphone-daniel_simon.mp3");
+    //adds control dashboard to show that audio file is working
+    //hide if you want to only use your own buttons
+    //audioElem.setAttribute("controls", "controls");
+
+    //add audio to div in HTML
+    document.getElementById("divAudio").appendChild(audioElem);
+
+    //hide addAudio
+    document.getElementById("btnAddAudio").hidden=true;
+
+//show playAudio and pauseAudio
+document.getElementById("btnPlayAudio").hidden=false;
+
+document.getElementById("btnPauseAudio").hidden=false;
+}
+
+//function to play audio
+function playAudio(){
+    let audio=document.getElementById("audioElem");
+    audio.play();
+}
+
+//function to pause audio
+function pauseAudio(){
+    let audio=document.getElementById("audioElem");
+    audio.pause();
+}
+
+
