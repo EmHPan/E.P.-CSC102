@@ -239,6 +239,9 @@ let student1 = new Student("Bob Smith", "ACS", 4.0, 2025, 2028, "bob@bob.com", "
 
 //Notes 11/18
 //Array Practice
+//Plants /////
+
+//for 12.1 assignment
 
 //this is too much work to make each plant its own variable
 let plant1 = "Rose";
@@ -259,6 +262,9 @@ function addPlant(){
 
     //add new plant to array
     arrPlants.push(newPlant);
+
+    //call show plants to add new plant to list
+    showPlants();
 }
 
 //loop through array of plants
@@ -268,6 +274,9 @@ function showPlants(){
     //shortcut to ul in HTML
     let ulPlants = document.getElementById("ulPlants");
 
+    //remove plants already in ul
+    ulPlants.innerHTML = "";
+
     // for each loop to run through list
     arrPlants.forEach(function(plant, index){
         //create li using JS
@@ -275,15 +284,28 @@ function showPlants(){
         //will cause plant name to show on screen
         li.textContent = plant;
 
+        //add event handler so that when li is clicked, can be deleted
+        li.onclick = function(){
+//check  with user to make sure they really want to delete plant
+            if(confirm('Remove ' + plant + '?')){
+                //if really want to delete plant, delete plant
+                arrPlants.splice(index, 1);
+
+                //refresh list
+                showPlants();
+            }
+        };
+
         //will add new list item to existing ul
         ulPlants.appendChild(li);
     });
 }
-
-console.log(arrPlants)
+//works
+//console.log(arrPlants)
 
 
 //Sound
+
 //create function to add audio element in HTML div
 function addAudio(){
     //need audio html element
@@ -319,5 +341,4 @@ function pauseAudio(){
     let audio=document.getElementById("audioElem");
     audio.pause();
 }
-
 

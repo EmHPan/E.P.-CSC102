@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class Practice</title>
+    <title>Plants</title>
     <script src="code.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
@@ -25,7 +25,7 @@
             <br>
             <a href="palindrome.html">Palindrome Tester</a>
             <br>
-            <a href="class.html">Class Notes</a>
+            <a href="class.html">Plants</a>
             <br>
             <a href="sound.html">Play Sound</a>
         </nav>
@@ -39,13 +39,15 @@
         <ul id="ulPlants">
          
         </ul>
+        <h4>*Click on a plant name to delete it*</h4>
         <h3>Add a plant</h3>
         <input type="text" id="txtNewPlant">
         <br>
         <button onclick="addPlant();">Add Your Own Plant!</button>
-        <p>Currently under construction. Please visit later!</p>
+        <p>When you reload this page, the plants that you added will disappear! If you don't reload this page, you can add or subtract as many plants as you want!</p>
     </div>
     <script>
+        //called 1 time when page initially loads
         showPlants();
     </script>
     <footer>
