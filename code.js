@@ -342,3 +342,40 @@ function pauseAudio(){
     audio.pause();
 }
 
+//Table ////
+
+//function to load data into table
+function loadData(){
+    //array of problem projects
+    //data is usually 2d
+    //this is 2d array
+    let arrProblems = [
+        //1st roww of data - nested array
+        ["Crowdstrike", 2024, "$5.4B"],
+        ["Facebook", 2020, "$90M"],
+        ["Citibank", 2020, "$900M"],
+        ["Mars Climate Orbiter", 1999, "$327M"]
+    ];
+
+    //nesting loop to display data
+    for (let i=0; i<arrProblems.length; i++){
+        //create the tr to store data
+        let tr = document.createElement("tr");
+
+        //inner loop, loop through each nested array
+        // i is kind of short for index, j comes next
+        for (let j=0; j<arrProblems[i].length; j++){
+            //create the td to display data
+        let td = document.createElement("td");
+
+        //put data in td
+        td.textContent = arrProblems[i][j];
+
+        //append new data to existing row
+        tr.appendChild(td);
+        }
+
+        //ad new row to existing table
+        document.getElementById("tblData").appendChild(tr);
+    }
+}

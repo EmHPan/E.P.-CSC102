@@ -47,3 +47,14 @@ button{
     background-color: #3a0307;
     border-color: #8EE3F5;
 }
+
+table, th, td{
+    border: 2px solid;
+    border-color:#3a0307;
+    background-color:#8EE3F5;
+    color: #27213C;
+}
+
+caption{
+    color:#A799B7;
+}
