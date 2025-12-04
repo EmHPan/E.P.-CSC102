@@ -2,6 +2,7 @@ body{
 background-color: #3E517A ;
 color: #8EE3F5;
 font-family: "Story Script", sans-serif;
+line-height: 2;
 }
 
 nav{
@@ -48,13 +49,41 @@ button{
     border-color: #8EE3F5;
 }
 
+/*Table code*/
+
 table, th, td{
-    border: 2px solid;
-    border-color:#3a0307;
-    background-color:#8EE3F5;
-    color: #27213C;
+    border: 2px solid #3a0307;
+    max-width: 400px;
+    /*multiple borders in same araea will collapse into single border*/
+    border-collapse: collapse;
+    text-align: center;
 }
 
 caption{
     color:#A799B7;
+}
+
+tr, th, td{
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    color:#8EE3F5;
+    background-color: #27213C;
+}
+
+tr:nth-child(odd){
+    color:#27213C;
+    background-color: #8EE3F5;
+}
+
+th{
+    color:#A799B7;
+    background-color: #3a0307;
+}
+
+tr:hover{
+    background: #A799B7;
+    color: #3a0307;
+    text-decoration: underline;
 }

@@ -379,3 +379,4 @@ function loadData(){
         document.getElementById("tblData").appendChild(tr);
     }
 }
+
